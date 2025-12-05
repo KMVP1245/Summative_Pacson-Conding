@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Summative_Pacson-Conding", "Summative_Pacson-Conding\Summative_Pacson-Conding.csproj", "{4ECDFFBF-A685-42FF-8168-DC3A53494043}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHelper", "DataHelper\DataHelper.csproj", "{F9E675A6-163F-46B6-8715-CA45A14EB2C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4ECDFFBF-A685-42FF-8168-DC3A53494043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECDFFBF-A685-42FF-8168-DC3A53494043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECDFFBF-A685-42FF-8168-DC3A53494043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E675A6-163F-46B6-8715-CA45A14EB2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E675A6-163F-46B6-8715-CA45A14EB2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E675A6-163F-46B6-8715-CA45A14EB2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E675A6-163F-46B6-8715-CA45A14EB2C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
