@@ -58,7 +58,7 @@ namespace Summative_Pacson_Conding.AdminForms
             {
                 MessageBox.Show("Equipment with the same name and description already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            //t
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -169,12 +169,12 @@ namespace Summative_Pacson_Conding.AdminForms
 
                 if (success)
                 {
-                    MessageBox.Show("Equipment deleted successfully!");
+                    MessageBox.Show("Equipment deleted successfully");
                     LoadEquipmentList(); 
                 }
                 else
                 {
-                    MessageBox.Show("Failed to delete equipment. Try again.");
+                    MessageBox.Show("Failed to delete equipment. Try again");
                 }
             }
         }
