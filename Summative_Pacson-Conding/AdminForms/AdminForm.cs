@@ -34,5 +34,34 @@ namespace Summative_Pacson_Conding
            
             this.Close(); // or this.Hide(); kung gusto tago lang
         }
+
+        private void addUserAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 parent = this.MdiParent as Form1;
+            UserCreation usercreate = new UserCreation();
+            usercreate.MdiParent = parent;
+            usercreate.Dock = DockStyle.Fill;
+            usercreate.Show();
+
+
+            this.Close(); // or this.Hide(); kung gusto tago lang
+        }
+
+        private void passwordRecoveryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 parent = this.MdiParent as Form1;
+            UserPasswordRecovery upr = new UserPasswordRecovery();
+            upr.MdiParent = parent;
+            upr.Dock = DockStyle.Fill;
+            upr.Show();
+
+
+            this.Close(); // or this.Hide(); kung gusto tago lang
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

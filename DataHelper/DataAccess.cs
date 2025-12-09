@@ -32,7 +32,7 @@ namespace DataHelper
                 }
                 else
                 {
-                    return -1; 
+                    return -1;
                 }
             }
         }
@@ -129,5 +129,71 @@ namespace DataHelper
         }
         //DELETE EQUIPMENT LOGIC =============================================================================================
 
+        //USER CREATION LOGIC =============================================================================================
+        public bool CreateUser(string studentID, string firstName, string lastName, string gender, string course, string username, string password)
+        {
+            using (SqlConnection conn = new SqlConnection(myConstr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("CreateUser", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@StudentID", studentID);
+                cmd.Parameters.AddWithValue("@FirstName", firstName);
+                cmd.Parameters.AddWithValue("@LastName", lastName);
+                cmd.Parameters.AddWithValue("@Gender", gender);
+                cmd.Parameters.AddWithValue("@Course", course);
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Password", password);
+                // wlaang role auto 0
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch
+                {
+                    return false; // duplication error or SQL error
+                }
+            }
+        }
+        //USER CREATION LOGIC =============================================================================================
+
+        //User List==============================================================================================
+        public DataTable GetAllUsers()
+        {
+            using (SqlConnection conn = new SqlConnection(myConstr))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetAllUsers", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+        //User List==============================================================================================
+
+        //PASSWORD RESET LOGIC =============================================================================================
+        public bool ResetUserPassword(string username, string newPassword)
+        {
+            using (SqlConnection conn = new SqlConnection(myConstr))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("ResetPassword", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@NewPassword", newPassword);
+
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+        }
+        //PASSWORD RESET LOGIC =============================================================================================
     }
 }

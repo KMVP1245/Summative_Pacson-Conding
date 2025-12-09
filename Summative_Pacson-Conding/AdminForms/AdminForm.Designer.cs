@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEquipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editEqupmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,8 +55,7 @@
             // managementToolStripMenuItem
             // 
             this.managementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEquipmentToolStripMenuItem,
-            this.editEqupmentToolStripMenuItem});
+            this.addEquipmentToolStripMenuItem});
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
             this.managementToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.managementToolStripMenuItem.Text = "Equipment";
@@ -66,14 +64,8 @@
             // 
             this.addEquipmentToolStripMenuItem.Name = "addEquipmentToolStripMenuItem";
             this.addEquipmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addEquipmentToolStripMenuItem.Text = "Add Equipment";
+            this.addEquipmentToolStripMenuItem.Text = "Manage Equipment";
             this.addEquipmentToolStripMenuItem.Click += new System.EventHandler(this.addEquipmentToolStripMenuItem_Click);
-            // 
-            // editEqupmentToolStripMenuItem
-            // 
-            this.editEqupmentToolStripMenuItem.Name = "editEqupmentToolStripMenuItem";
-            this.editEqupmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editEqupmentToolStripMenuItem.Text = "Edit Equpment";
             // 
             // menuStrip1
             // 
@@ -101,12 +93,14 @@
             this.addUserAccountToolStripMenuItem.Name = "addUserAccountToolStripMenuItem";
             this.addUserAccountToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.addUserAccountToolStripMenuItem.Text = "Add User Account";
+            this.addUserAccountToolStripMenuItem.Click += new System.EventHandler(this.addUserAccountToolStripMenuItem_Click);
             // 
             // passwordRecoveryToolStripMenuItem
             // 
             this.passwordRecoveryToolStripMenuItem.Name = "passwordRecoveryToolStripMenuItem";
             this.passwordRecoveryToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.passwordRecoveryToolStripMenuItem.Text = "Password Recovery";
+            this.passwordRecoveryToolStripMenuItem.Click += new System.EventHandler(this.passwordRecoveryToolStripMenuItem_Click);
             // 
             // recordToolStripMenuItem
             // 
@@ -132,6 +126,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminForm";
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -144,7 +139,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEquipmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editEqupmentToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserAccountToolStripMenuItem;
